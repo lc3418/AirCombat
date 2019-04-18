@@ -1,20 +1,80 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>AirCombat1.0</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <style type="text/css">
-    a{margin-left: 20px; text-decoration: none;}
-    a:hover{text-decoration: underline;}
-    </style>
-  </head>
-  <body>
-    <h5>AirCombat_welcome_page</h5>
-    <p>Test</p>
+<head>
+    <meta charset="UTF-8">
+    <title>AirCombat</title>
+</head>
+<style>
+    form {
+        width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+    
+    div {
+        padding: 5px 0;
+        border-radius: 5px;
+    }
+    
+    label {
+        display: inline-block;
+        width: 100px;
+        margin-right: 40px;
+        text-align: right;
+    }
+    
+    .inputText {
+        display: inline-block;
+        width: 220px;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
+    
+    .login {
+        display: block;
+        margin: 0.3em;
+        padding: 0.4em 1em;
+        position: relative;
+        border-radius: 5px;
+        background-color: bisque;
+        width: 90px;
+        box-shadow: 1px 1px 1px;
+    }
+    
+    #btn1 {
+        float: left;
+        margin-left: 20px;
+    }
+    
+    #btn2 {
+        float: right;
+        margin-right: 20px;
+    }
+    
+    #submit {
+        border-radius: 5px;
+        background-color: bisque;
+        width: 90px;
+        box-shadow: 1px 1px 1px;
+        margin-top: 20px;
+        margin-left: 155px;
+    }
+</style>
+</script>
 
-    <p><a href="/login">Login</a>
-       <a href="/regis">Register</a>
-    </p>
-  </body>
+
+<body>
+    <form action="" method="GET" id="register">
+        <div>
+            <img style="width: 200px; height: 100px; display: block; float: left; margin-left: 100px; margin-bottom:22px;">
+        </div>
+        <input type="button" id="btn1" class="login" value="Sign in" onclick="javascript:window.location.href='/login'" />
+        <input type="button" id="btn2" class="login" value="Sign up" onclick="javascript:window.location.href='/regis'" />
+        <input type="button" id="submit" value="Play Game" />
+    </form>
+
+</body>
+
 </html>
-
