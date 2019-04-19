@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
     <title>AirCombat</title>
 </head>
-<style>
+<style type="text/css">
     form {
-        width: 400px;
-        margin: 50px auto;
-        padding: 20px;
+        width: 600px;
+        margin: 0 auto;
+        padding: 0;
         border-radius: 5px;
-        border: 1px solid black;
+        height: 800px;
     }
     
     div {
@@ -38,43 +38,45 @@
         padding: 0.4em 1em;
         position: relative;
         border-radius: 5px;
-        background-color: bisque;
-        width: 90px;
+        background-color:aqua;
+        width: 150px;
         box-shadow: 1px 1px 1px;
     }
     
     #btn1 {
         float: left;
-        margin-left: 20px;
+        margin-left: 0;
+        margin-top: 300px;
     }
     
     #btn2 {
         float: right;
-        margin-right: 20px;
+        margin-right: 0;
+        margin-top: 300px;
     }
     
     #submit {
         border-radius: 5px;
-        background-color: bisque;
-        width: 90px;
+        background-color:cornflowerblue;
+        width: 200px;
         box-shadow: 1px 1px 1px;
-        margin-top: 20px;
-        margin-left: 155px;
+        margin-top: 400px;
+        margin-left: 45px;
+        height: 60px;
     }
 </style>
 </script>
 
 
-<body>
+<body background="../img/index_bg.jpg">
     <form action="" method="GET" id="register">
         <div>
-            <img style="width: 200px; height: 100px; display: block; float: left; margin-left: 100px; margin-bottom:22px;">
+            <img src = "../img/index_logo.jpg" style="width: 600px; height: 400px; display: block; float: left; margin-left: 0; margin-bottom:0;">
         </div>
         <input type="button" id="btn1" class="login" value="Sign in" onclick="javascript:window.location.href='/login'" />
         <input type="button" id="btn2" class="login" value="Sign up" onclick="javascript:window.location.href='/regis'" />
-        <input type="button" id="submit" value="Play Game" />
+        <input type="button" id="submit" value="Play Game" onclick="javascript:window.location.href='/home_page'" />
     </form>
 
 </body>
-
 </html>

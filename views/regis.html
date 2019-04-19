@@ -15,13 +15,22 @@
             margin-left: auto;
             margin-right: auto;
         }
+        .col-sm-offset-10 {
+            margin-left: 0;
+        }
+        .col-sm-2 {
+            width: 100%;
+        }
+        .container {
+            width: 100%;
+            margin-top: 250px;
+        }
         </style>
 </head>
-<body>
+<body background="../img/index_bg.jpg">
 	<div class="container">
 	<form class="col-sm-offset-4 col-sm-4 form-horizontal" role="form" method="post" onsubmit="return false">
 	<fieldset>
-		<legend></legend>
 		<div class="panel panel-default>
 		<div class="panel-heading">
                     <p class="tc">Register</p>
@@ -55,7 +64,7 @@
                         <button type="submit" class="btn btn-primary btn-block" id="register1">Reigster</button>
                 </div>
                 <div class="form-group">
-                        <button type="button" class="btn btn-info col-sm-2 col-sm-offset-10" id="login1">Login</button>
+                        <button type="button" class="btn btn-info col-sm-2 col-sm-offset-10" id="login1" onclick="javascript:window.location.href='/login'">Login</button>
                 </div>
                 </div>
                 </div>
