@@ -1,0 +1,75 @@
+form {
+    width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 5px;
+    height: 600px;
+}
+
+div {
+    padding: 5px 0;
+    border-radius: 5px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    margin-right: 40px;
+    text-align: right;
+}
+
+.inputText {
+    display: inline-block;
+    width: 220px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.login {
+    display: block;
+    margin: 0.3em;
+    padding: 0.4em 1em;
+    position: relative;
+    border-radius: 5px;
+    background-color:aqua;
+    width: 150px;
+    box-shadow: 1px 1px 1px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.enter {
+    font-size: 25px;
+    background-color:turquoise;
+}
+
+.logo {
+    height: 250px; 
+    display: block; 
+    float: none; 
+    margin-left:auto; 
+    margin-right:auto;
+    margin-top:15%;
+    margin-bottom:0;
+}
+
+#btn1 {
+    float: left;
+    margin-left: 20%;
+    margin-top: 0px;
+}
+
+#btn2 {
+    float: right;
+    margin-right: 20%;
+    margin-top: 0px;
+}
+
+#submit {
+    border-radius: 5px;
+    background-color:cornflowerblue;
+    width: 200px;
+    box-shadow: 1px 1px 1px;
+    margin-top: 0;
+    height: 60px;
+}

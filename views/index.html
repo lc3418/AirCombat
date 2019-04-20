@@ -3,80 +3,25 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
     <title>AirCombat</title>
+    <link href="../stylesheets/index.css" rel="stylesheet" type="text/css" />
 </head>
-<style type="text/css">
-    form {
-        width: 600px;
-        margin: 0 auto;
-        padding: 0;
-        border-radius: 5px;
-        height: 800px;
-    }
-    
-    div {
-        padding: 5px 0;
-        border-radius: 5px;
-    }
-    
-    label {
-        display: inline-block;
-        width: 100px;
-        margin-right: 40px;
-        text-align: right;
-    }
-    
-    .inputText {
-        display: inline-block;
-        width: 220px;
-        margin-right: 20px;
-        border-radius: 5px;
-    }
-    
-    .login {
-        display: block;
-        margin: 0.3em;
-        padding: 0.4em 1em;
-        position: relative;
-        border-radius: 5px;
-        background-color:aqua;
-        width: 150px;
-        box-shadow: 1px 1px 1px;
-    }
-    
-    #btn1 {
-        float: left;
-        margin-left: 0;
-        margin-top: 300px;
-    }
-    
-    #btn2 {
-        float: right;
-        margin-right: 0;
-        margin-top: 300px;
-    }
-    
-    #submit {
-        border-radius: 5px;
-        background-color:cornflowerblue;
-        width: 200px;
-        box-shadow: 1px 1px 1px;
-        margin-top: 400px;
-        margin-left: 45px;
-        height: 60px;
-    }
-</style>
 </script>
 
 
 <body background="../img/index_bg.jpg">
+    <!--div class = "div1"-->
     <form action="" method="GET" id="register">
-        <div>
-            <img src = "../img/index_logo.jpg" style="width: 600px; height: 400px; display: block; float: left; margin-left: 0; margin-bottom:0;">
+        <div align="center">
+            <img src = "../img/index_logo.png" class="logo">
         </div>
+    </form>
+        <div>
         <input type="button" id="btn1" class="login" value="Sign in" onclick="javascript:window.location.href='/login'" />
         <input type="button" id="btn2" class="login" value="Sign up" onclick="javascript:window.location.href='/regis'" />
-        <input type="button" id="submit" value="Play Game" onclick="javascript:window.location.href='/home_page'" />
-    </form>
-
+        </div>
+        <div align="center">
+        <input type="button" id="submit" class="enter" value="Play Game" onclick="javascript:window.location.href='/home_page'" />
+        </div>
+    <!--/div-->
 </body>
 </html>
