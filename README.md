@@ -11,6 +11,6 @@
 
 ### Technologies and services that will be used:
    * `Frontend:` 
-   	    * JavaScript, CSS, HTML5<br>
+   	    * js+css+html, bootstrap, jquery<br>
    * `Backend:` 
-   	    * Node.js, express, Firebase<br>
+   	    * Node.js, express, MongoDB<br>
