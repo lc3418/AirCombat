@@ -1,5 +1,6 @@
 var mongoose=require('mongoose');
-var db=mongoose.createConnection('mongodb://localhost:27017/nodedb');
+var db=mongoose.createConnection('mongodb://username:password@host:port/dbname?authSource=dbname');//revise this line to connect to the corresponding database with authorization
+
 db.on('error',function(error){
 	console.log(error);
 });
