@@ -71,7 +71,8 @@ router.route('/login').get(function(req, res) {
 //homepage
 router.route('/homepage').get(function(req, res) {
 	if(!req.session.user) {
-		req.session.error = "You need to sign in first!"
+		req.session.error = "You need to sign in first!";
+		//alert("You need to sign in first!");
   		res.redirect("/login");	
   	}
  	res.render('homepage');
@@ -80,7 +81,8 @@ router.route('/homepage').get(function(req, res) {
 //log out function
 router.route('/logout').get(function(req, res) {
   	req.session.user=null;
-  	req.session.error = null;
+	req.session.error = null;
+	//alert("Success! Now directing to index page.");
   	res.redirect("/");	
 });
 

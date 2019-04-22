@@ -84,9 +84,17 @@
                 var password1=$('#password1').val();
                 var password2=$('#password2').val();
                 var data={'username':username,'password':password1};
+
+                var regLetter = /[a-zA-Z]+/;
     
                 if(!username) {
                     alert("Empty username not allowed!");
+                }
+                else if(username.length < 6 || password1.length < 6) {
+                    alert("The length of username/password should be longer than 6!");
+                }
+                else if(regLetter.test(username) || regLetter.test(password1)) {
+                    alert("Username/Password should contain at least one letter!");
                 }
                 else if(password1!==password2){
                     alert("Password does not match!");
@@ -103,7 +111,7 @@
                             }
                         },
                         error:function(data,err){
-                            alert("error!");
+                            alert("error");
                             location.href='regis';
                         }
                     })    
