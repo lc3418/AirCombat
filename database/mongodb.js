@@ -7,7 +7,8 @@ db.on('error',function(error){
 
 var mongooseSchema=new mongoose.Schema({
 	name:{type:String},
-	password:{type:String}
+	password:{type:String},
+	max_score:{type:Number}
 });
 mongooseSchema.methods.findByName=function(name,callback){
 	return this.model('user').find({name:name},callback);

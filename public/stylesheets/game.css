@@ -1,0 +1,172 @@
+html,body {
+    height: 100%;
+    margin: 0%;
+}
+
+body {
+    margin: 0%;
+}
+
+.info1 {
+    float: left;
+    font-size: 20px;
+    color: white;
+}
+
+
+#userinfo {
+    margin-right: inherit;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    height: 5%;
+}
+
+#container {
+    width: 20%;
+    float: left;
+}
+
+#start_page {
+    text-align: center;
+    float: right;
+    width: 750px;
+    height: 950px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: url('../img/nm$L.png');
+    background-repeat: repeat-y;
+    z-index: 3;
+}
+
+#start {
+    margin-top: 600px;
+}
+
+#main { /* game main */
+    text-align: center;
+    float: right;
+    width: 750px;
+    height: 950px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: url('../img/volcano_1.png');
+    background-repeat: repeat-y;
+    z-index: 1;
+}
+
+#topinfo { /* div which contains user's max score(left) and real-time score of this game(right) */
+    overflow: hidden;
+    width: inherit;
+    border: 1px solid #000;
+}
+
+#top_left {
+    padding-left: 10px;
+    float: left;
+    width: 150px;
+}
+
+#max_score_icon {
+    float: left;
+    width: 120px;
+    height: 34px;   
+}
+
+#max_score {
+    float: left;
+    display: block;
+}
+
+#max_socre_number {
+    float: left;
+    width: 18px;
+}
+
+#score {
+    float: right;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#score_number{
+    float: right;
+    width: 20px;
+}
+
+#bottominfo { /* div which contains user's hp(left) and pause, restart buttons(right) */
+    overflow: hidden;
+    width: inherit;
+    margin-top: 780px;
+    border: 1px solid #000;
+}
+
+#hp_view { /* user's hp */
+    float: left;
+    width: 150px;
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+#hp_img {
+    float: left;
+    width: 25px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#hp_box {
+    float: left;
+    width: 100px;
+    height: 10px;
+    border: 2px solid #964a2c;
+    margin-top: 25px;
+}
+
+#current_hp {
+    width: 100px;
+    height: 10px;
+    background: #ec4f00;
+}
+
+#tools {
+    float: right;
+    width: 150px;
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+#pause {
+    float: right;
+    width: 60px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#restart {
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin-top: 22px;
+}
+
+#game_over {
+    z-index: 2;
+    float: right;
+    width: 750px;
+    height: 950px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+

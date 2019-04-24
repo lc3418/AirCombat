@@ -2,12 +2,61 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AirCombat_game_center</title>
+        <link href="../stylesheets/game.css" rel="stylesheet" type="text/css">
     </head>
     <body background="../img/index_bg.jpg">
-        <h1 align="center">Welcome to AirCombat, <%= user.name %>!</h1>
-        <h1 align="center">Our server is under maintainance, please come back later</h1>
-        <p align="center"><a href="/logout">log out</a>
-        </p>
+        <div id="container"></div>
+
+        <div id="userinfo">
+            <div class="info1">*** <%= user.name %> ***  
+                <span id="username"><a href="/logout">Sign out</a></span>
+            </div>
+        </div>
+
+        <div id="start_page" style="display: none">
+            <div id="start">
+                <img id="start_button" src="../img/start_game.png">
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="topinfo">
+                <div id="top_left">
+                    <img id="max_score_icon" src="../img/max_score.png"> <br/><br/>
+                    
+                    <div id="max_score">
+                        <img id="max_socre_number" src="../img/0.png">
+                    </div>
+
+                </div>
+
+                <div id="score">
+                    <img id="score_number" src="../img/0.png">
+                </div>
+            </div>
+
+            <div id="bottominfo">
+                <div id="hp_view">
+                    <img id="hp_img" src="../img/hp_icon.png">
+                    <div id="hp_box">
+                        <div id="current_hp" style="width: 75px"></div>
+                    </div>
+                </div>
+
+                <div id="tools">
+                    <img id="restart" src="../img/restart.png">
+                    <img id="pause" src="../img/pause.png">
+                </div>
+            </div>    
+            
+        </div>
+
+        <div id="game_over" style="display: block">
+            
+        </div>
     </body>
 </html>
+
+
