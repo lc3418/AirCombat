@@ -113,7 +113,8 @@ body {
 #bottominfo { /* div which contains user's hp(left) and pause, restart buttons(right) */
     overflow: hidden;
     width: inherit;
-    margin-top: 746px;
+    height: 80px;
+    margin-top: 795px;
     border: 1px solid #000;
 }
 
@@ -136,14 +137,14 @@ body {
     float: left;
     width: 150px;
     height: 20px;
-    border: 2px solid #964a2c;
+    border: 2px solid #ff0000;
     margin-top: 20px;
 }
 
 #current_hp {
     width: 150px;
     height: 20px;
-    background: #ec4f00;
+    background: #ff0000;
 }
 
 #tools {
@@ -155,16 +156,15 @@ body {
 
 #pause {
     float: right;
-    width: 60px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+    width: 50px;
+    margin-right: 20px;
+    margin-top: 7px;
 }
 
 #restart {
     float: right;
-    width: 30px;
-    height: 30px;
-    margin-top: 22px;
+    width: 50px;
+    margin-top:7px;
 }
 
 #game_over {
