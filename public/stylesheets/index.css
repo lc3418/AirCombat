@@ -24,7 +24,7 @@ label {
     margin-right: 20px;
     border-radius: 5px;
 }
-
+/*
 .login {
     display: block;
     margin: 0.3em;
@@ -36,35 +36,58 @@ label {
     box-shadow: 1px 1px 1px;
     height: 40px;
     font-size: 20px;
-}
+}*/
 
 .enter {
     font-size: 25px;
-    background-color:turquoise;
 }
 
+/*
 .logo {
-    height: 250px; 
-    display: block; 
-    float: none; 
-    margin-left:auto; 
+    height: 250px;
+    display: block;
+    float: none;
+    margin-left:auto;
     margin-right:auto;
     margin-top:15%;
     margin-bottom:0;
 }
+*/
 
-#btn1 {
+.logo {
+  width: 600px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:25%;
+}
+
+/*#btn1 {
     float: left;
     margin-left: 20%;
     margin-top: 0px;
+}*/
+
+#btn1 {
+    float: right;
+    width: 150px;
+    margin-bottom: 50px;
+    margin-right: 300px;
 }
 
+/*
 #btn2 {
     float: right;
     margin-right: 20%;
     margin-top: 0px;
 }
-
+*/
+#btn2 {
+    float: left;
+    width: 150px;
+    margin-bottom: 50px;
+    margin-left: 300px;
+}
+/*
 #submit {
     border-radius: 5px;
     background-color:cornflowerblue;
@@ -72,4 +95,11 @@ label {
     box-shadow: 1px 1px 1px;
     margin-top: 0;
     height: 60px;
+}
+*/
+
+#submit {
+    position: center;
+    width: 200px;
+    margin-bottom: 30px;
 }
