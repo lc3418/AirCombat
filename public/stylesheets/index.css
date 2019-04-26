@@ -58,14 +58,9 @@ label {
   width: 600px;
   margin-left:auto;
   margin-right:auto;
-  margin-top:10%;
+  margin-top:25%;
 }
 
-.plane {
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:15%;
-}
 /*#btn1 {
     float: left;
     margin-left: 20%;

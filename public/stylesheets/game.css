@@ -7,27 +7,17 @@ body {
     margin: 0%;
 }
 
-.info1 {
-    float: left;
-    font-size: 20px;
-    color: white;
+#start{
+    width: 200px;
+    margin-top: 350px;
 }
 
-
-#userinfo {
-    margin-right: inherit;
-    display: inline-block;
-    position: absolute;
-    right: 10px;
-    height: 5%;
+#restart {
+    width: 400px;
+    margin: 80px auto;
 }
 
-#container {
-    width: 20%;
-    float: left;
-}
-
-#start_page {
+#start_page{
     text-align: center;
     float: right;
     width: 750px;
@@ -36,17 +26,40 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    background: url('../img/nm$L.png');
+    background: url('../img/start_page.png');
     background-repeat: repeat-y;
     z-index: 3;
 }
 
-#start {
-    margin-top: 600px;
+#battleground {
+    width: 750px;
+    height: 950px;
+    background: url(../img/scenes/sky.jpg) repeat-y;
+    margin:auto;
+    background-position: 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    z-index: 1;
+    overflow: hidden;
 }
 
-#main { /* game main */
-    text-align: center;
+#main{
+    width: 750px;
+    height: 950px;
+    margin:auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    z-index: 1;
+}
+
+#paused{
+    z-index: 2;
     float: right;
     width: 750px;
     height: 950px;
@@ -54,120 +67,24 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    /* background: url('../img/volcano_1.png'); */
-    background: url('../img/scenes/sky.jpg');
-    background-repeat: repeat-y;
-    z-index: 1;
-}
-
-#topinfo { /* div which contains user's max score(left) and real-time score of this game(right) */
+    z-index: 2;
     overflow: hidden;
-    width: inherit;
-    border: 1px solid #000;
 }
 
-#top_left {
-    padding-left: 10px;
-    float: left;
-    width: 150px;
+#damage{
+    width: 750px;
+    height: 950px;
+    margin:auto;
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+    display: none;
 }
 
-#max_score_icon {
-    float: left;
-    margin-top: 10px;
-    width: 200px;
-    height: 30px;
-}
-
-#max_score {
-    float: left;
-   /* display: block; */
-  /* margin-top: 5px;*/
-   margin-left: 15px;
-   margin-bottom: 10px;
-}
-
-#max_socre_number {
-    float: left;
-    margin-top: 10px;
-    width: 20px;
-}
-
-#score_icon {
-    float: right;
-    width: 80px;
-    height: 30px;
-}
-
-#score {
-    float: right;
-    margin-top: 10px;
-}
-
-#score_number{
-    float: right;
-    width: 20px;
-    margin-right: 30px;
-}
-
-#bottominfo { /* div which contains user's hp(left) and pause, restart buttons(right) */
-    overflow: hidden;
-    width: inherit;
-    height: 80px;
-    margin-top: 795px;
-    border: 1px solid #000;
-}
-
-#hp_view { /* user's hp */
-    float: left;
-    width: 220px;
-    overflow: hidden;
-    padding-left: 10px;
-}
-
-#hp_img {
-    float: left;
-    width: 55px;
-    margin-top: 7px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-#hp_box {
-    float: left;
-    width: 150px;
-    height: 20px;
-    border: 2px solid #ff0000;
-    margin-top: 20px;
-}
-
-#current_hp {
-    width: 150px;
-    height: 20px;
-    background: #ff0000;
-}
-
-#tools {
-    float: right;
-    width: 150px;
-    overflow: hidden;
-    padding-right: 10px;
-}
-
-#pause {
-    float: right;
-    width: 50px;
-    margin-right: 20px;
-    margin-top: 7px;
-}
-
-#restart {
-    float: right;
-    width: 50px;
-    margin-top:7px;
-}
-
-#game_over {
+#game_over{
     z-index: 2;
     float: right;
     width: 750px;
@@ -177,4 +94,109 @@ body {
     top: 50%;
     transform: translate(-50%,-50%);
     background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    overflow: hidden;
 }
+
+#score{
+    float: right;
+    margin-top: 10px;
+}
+
+#score_icon {
+    float: right;
+    width: 80px;
+    height: 30px;
+}
+            
+#score img{
+    float: left;
+    width: 20px;
+    display: block;
+}
+
+#topinfo{
+    overflow: hidden;
+    width: inherit;
+}
+
+#max{
+    overflow: hidden;
+    float: left;
+    width: 200px;
+    padding-left: 12px; 
+}
+
+#max_score_icon{
+    float: left;
+    width: 170px;
+    height: 51px;
+}
+
+#max_score img{
+    width: 20px;
+}
+
+#hp_view{
+    float: left;
+    width: 220px;
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+#hp_icon{
+    width: 40px;float: left;margin: 10px 10px 0 0;
+}
+
+#user_hp_view{
+    float: left;
+    width: 150px;
+    height: 20px;
+    border: 2px solid #ff0000;
+    margin-top: 20px;
+}
+
+#current_hp{
+    width: 150px;
+    height: 20px;
+    background: #ff0000;
+}
+
+#over_title {
+    text-align: center;
+    width: 512px;
+    margin: 150px auto 0;
+}
+            
+#over_title img {
+    width: 300px;
+    margin: 106px;
+}
+            
+#over_score {
+    width: 512px;
+    text-align: center;
+    margin: 50px auto 0;
+}
+            
+#over_score img {
+    height: 50px;
+}
+            
+#over_titleImg_0 {
+    display: none;
+}
+            
+#over_titleImg_1 {
+    display: none;
+}
+
+
+#botinfo { /* div which contains user's hp(left) and pause, restart buttons(right) */
+    overflow: hidden;
+    width: inherit;
+    height: 80px;
+    margin-top: 795px;
+}
+
+			
