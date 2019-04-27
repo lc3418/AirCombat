@@ -51,6 +51,9 @@ function preload(img_arr) {
 			load_pro.style.width = "400px";
 			document.getElementById("load_text").innerText = 'finished!';
 			document.getElementById("start").style.display = "block";
+			document.getElementById("restart").style.display = "block";
+			document.getElementById("topinfo").style.display = "block";
+			document.getElementById("botinfo").style.display = "block";
 			load_done(loaded_img);
 		}
 	}
@@ -796,7 +799,7 @@ function player_plane_explode() {
 	//TODO: Update maxscore to database for ranking function
 	var max = cookieUtil.getCookie("scores") || 0;
 	if(scores > max) { 
-		cookieUtil.setCookie("scores", scores, 7);
+		cookieUtil.setCookie("scores", scores, 30); //save max_score for 1 month
 		max = scores;
 	} 
 	over_title.getElementsByTagName("img")[0].style.display = "block";

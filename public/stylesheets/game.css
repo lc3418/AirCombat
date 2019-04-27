@@ -19,6 +19,7 @@ body {
 }
 
 #restart {
+    display: none;
     width: 400px;
     margin: 80px auto;
 }
@@ -144,6 +145,7 @@ body {
 }
 
 #topinfo{
+    display: none;
     overflow: hidden;
     width: inherit;
 }
@@ -219,8 +221,8 @@ body {
     display: none;
 }
 
-
 #botinfo { /* div which contains user's hp(left) and pause, restart buttons(right) */
+    display: none;
     overflow: hidden;
     width: inherit;
     height: 80px;
