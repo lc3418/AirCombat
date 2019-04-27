@@ -1,7 +1,85 @@
+var image = [
+	"../img/scenes/sky.jpg",
+	"../img/start_page.png",
+	"../img/damage.png",
+	"../img/health_icon.png",
+	"../img/highest_score.png",
+	"../img/nice_try.png",
+	"../img/img_plane_main.png",
+	"../img/img_plane_enemy.png",
+	"../img/img_bullet.png",
+	"../img/0.png",
+	"../img/1.png",
+	"../img/2.png",
+	"../img/3.png",
+	"../img/4.png",
+	"../img/5.png",
+	"../img/6.png",
+	"../img/7.png",
+	"../img/8.png",
+	"../img/9.png",
+	"../img/drop_0.png",
+	"../img/drop_1.png",
+	"../img/drop_2.png",
+	"../img/drop_3.png",
+	"../img/add_hp.png",
+	"../img/h_bullet_10.png",
+	"../img/h_bullet_11.png",
+	"../img/h_bullet_12.png",
+	"../img/h_bullet_13.png",
+	"../img/h_bullet_20.png",
+	"../img/h_bullet_21.png",
+	"../img/h_bullet_22.png",
+	"../img/h_bullet_23.png",
+	"../img/wsparticle_01.png",	
+	"../img/wsparticle_02.png",	
+	"../img/wsparticle_03.png",	
+	"../img/wsparticle_07.png",	
+];
+
+var load_finish = false;
+
+function preload(img_arr) {
+	var loaded_img = [], count = 0, load_rate = 0;
+	var load_done = function() {};
+	var img_arr=(typeof img_arr!="object")?[img_arr] : img_arr;
+	function _loading() {
+		count++;
+		load_rate += (400/img_arr.length);
+		load_pro.style.width = load_rate + "px";
+		if (count == img_arr.length){
+			load_pro.style.width = "400px";
+			document.getElementById("load_text").innerText = 'finished!';
+			document.getElementById("start").style.display = "block";
+			load_done(loaded_img);
+		}
+	}
+	for (var i=0; i < img_arr.length; i++) {
+		loaded_img[i] = new Image()
+		loaded_img[i].src = img_arr[i]
+		loaded_img[i].onload = function() {
+			_loading();
+		}
+		loaded_img[i].onerror=function() {
+			//error handler
+		}
+	}
+	return {
+		done:function(f){
+			load_done = f || load_done;
+		}
+	}
+}
+
+preload(image).done(function(images){
+	load_finish = true;
+})
+
 function $(id) {
 	return document.getElementById(id);
 }
 
+var load_pro = $("load_progress");
 var battle_ground = $("battleground");
 var start = $("start");
 var _pause = $("paused");
@@ -24,7 +102,7 @@ var plane_level = 0;
 var bullet_rows = 1;
 var dead = false; //if the plane has crashed
 var player_health = 150;
-var probability = 50; //items drop rate
+var probability = 35; //items drop rate
 var times;
 var player_plane;
 
@@ -32,13 +110,23 @@ var e_plane = battle_ground.getElementsByClassName("_enemy");
 var e_boss = battle_ground.getElementsByClassName("boss");
 
 start.onclick = function() {
-	startGame();
+	if(load_finish == true) {
+		startGame();
+	}
+	else {
+		alert("loading resources");
+	}
 };
 game_init
 
 game_init.onclick = function(){
-   startGame();
-   game_init.blur();
+	if(load_finish == true) {
+		startGame();
+		game_init.blur();
+	}
+	else {
+		alert("loading resources");
+	}
 };
 restart.onclick = startGame;
 _pause.onclick = function() {
@@ -296,6 +384,9 @@ function startGame() {
 			else {
 				bullet_speed = 10;
 			}
+		}
+		else if(e.keyCode == 65) {
+			player_plane_explode();
 		}
 	}
 }
@@ -763,7 +854,7 @@ function explosion(plane_explode) {
 			catch {
 			}
 		}
-	}, 50);
+	}, 200);
 }
 
 

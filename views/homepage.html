@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<title>AirCombat_beta</title>
 		<link href="../stylesheets/game.css" rel="stylesheet" type="text/css">
 	</head>
 	
-	<body background="../img/index_bg.jpg">
+	<body>
 		<div id="start_page">
+			<div id="load_box">
+				<h2 id="load_text" style="margin-top:0%">loading resources...</h2>
+				<div id="load_progress">
+				</div>
+			</div>
+			
 			<img id="start" src="../img/start.png"/>
 		</div>
 		
@@ -51,5 +58,11 @@
 		<input type="button" name="" id="consoleGame" value="PLAY"/>
 		<script src="../javascripts/game.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../javascripts/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(body).height($(window).height());
+				$(body).width($(window).width());
+			});
+			</script>
 	</body>
 </html>

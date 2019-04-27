@@ -1,15 +1,21 @@
-html,body {
+html {
+    width: 100%;
     height: 100%;
     margin: 0%;
 }
 
 body {
+    background: url("../img/index_bg.jpg");
+    width: 100%;
+    height: 100%;
     margin: 0%;
 }
 
 #start{
+    display: none;
     width: 200px;
     margin-top: 350px;
+    margin-left: 275px;
 }
 
 #restart {
@@ -29,6 +35,28 @@ body {
     background: url('../img/start_page.png');
     background-repeat: repeat-y;
     z-index: 3;
+}
+
+#load_box {
+	width: 400px;
+	height: 30px;
+	float: left;
+	border: 3px solid;
+	position: absolute;
+	margin-top: 600px;
+	margin-left: 175px;
+	background : #fcfbfb;
+}
+
+#load_progress {
+    width: 0px;
+    height: 30px;
+    background: #650dd8;
+    margin-top: -46px;
+}
+
+#load_text {
+    display: block;
 }
 
 #battleground {
@@ -164,17 +192,17 @@ body {
 
 #over_title {
     text-align: center;
-    width: 512px;
+    width: 750px;
     margin: 150px auto 0;
 }
             
 #over_title img {
     width: 300px;
-    margin: 106px;
+    margin: auto;
 }
             
 #over_score {
-    width: 512px;
+    width: 750px;
     text-align: center;
     margin: 50px auto 0;
 }
@@ -196,7 +224,7 @@ body {
     overflow: hidden;
     width: inherit;
     height: 80px;
-    margin-top: 795px;
+    padding-top: 800px;
 }
 
 			
