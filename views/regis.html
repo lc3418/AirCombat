@@ -34,7 +34,7 @@
 	<fieldset>
 		<div class="panel panel-default>
 		<div class="panel-heading">
-                    <p class="tc">Register</p>
+                    <p class="tc">Sign up</p>
                 </div>
                 <div class="panel-body m15">
                 <div class="form-group">
@@ -62,10 +62,10 @@
                     </div>
                 </div>
                 <div class="form-group">
-                        <button type="button" class="btn btn-primary btn-block" id="register">Reigster</button>
+                        <button type="button" class="btn btn-primary btn-block" id="register">reigster</button>
                 </div>
                 <div class="form-group">
-                        <button type="button" class="btn btn-info col-sm-2 col-sm-offset-10" id="login">Login</button>
+                        <button type="button" class="btn btn-info col-sm-2 col-sm-offset-10" id="login">login</button>
                 </div>
                 </div>
                 </div>
@@ -85,19 +85,33 @@
                 var password2=$('#password2').val();
                 var data={'username':username,'password':password1};
 
-                var regLetter = /[a-zA-Z]+/;
+                var regLetter = /[a-z]/i;
+                var regNumber = /[0-9]/i;
+                var regC = new RegExp("[\\u4E00-\\u9FFF]+","g");
+                var regEnSp = /[`!@#$%^&*()_+<>?:"{},.\/;'[\]]/im;
+		        var regCnSp = /[·！#￥（——）：；“”‘、，|《。》？、【】[\]]/im;
     
                 if(!username) {
                     alert("Empty username not allowed!");
+                    document.getElementById("username").focus();
                 }
-                else if(username.length < 6 || password1.length < 6) {
-                    alert("The length of username/password should be longer than 6!");
+                else if(username.length < 6 || password1.length < 6 ||username.length > 10 || password1.length > 10) {
+                    alert("Only accept a username/password with a length of 6-10!");
+                    document.getElementById("username").focus();
                 }
                 else if(!regLetter.test(username) || !regLetter.test(password1)) {
                     alert("Username/Password should contain at least one letter!");
+                    document.getElementById("username").focus();
+                }
+                else if(regC.test(username) || regC.test(password1) ||
+                        regEnSp.test(username) || regEnSp.test(password1) ||
+                        regCnSp.test(username) || regCnSp.test(password1)) {
+                    alert("Username/Password should not contain special character!");
+                    document.getElementById("username").focus();
                 }
                 else if(password1!==password2){
                     alert("Password does not match!");
+                    document.getElementById("password").focus();
                 }
                 else {
                     $.ajax({
@@ -106,18 +120,24 @@
                         data:data,
                         success:function(data,status){
                             if(status=='success'){
-                                alert("success! Now directing to login page");
+                                alert("Success! Now directing to login page");
                                 location.href='login';
                             }
                         },
                         error:function(data,err){
                             alert("error");
-                            location.href='regis';
+                            document.getElementById("username").focus();
                         }
                     })    
                 }
             })
         });
+        document.onkeydown = function(e) {
+            e = e || window.event;
+            if(e.keyCode == 13) {
+                document.getElementById("register").click();
+            }
+        } 
     </script>
 </body>
 </html>
